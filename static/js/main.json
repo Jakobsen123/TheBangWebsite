@@ -1,0 +1,11 @@
+{
+    "Album1": {
+        "Nummer 1": {
+            "File": "../audio/Nummer_1.mp3"
+        
+        },
+        "Nummer 2": {
+            "File": "../audio/Nummer_2.mp3"
+        }
+    }
+}

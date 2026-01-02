@@ -1,0 +1,303 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+html {
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    overscroll-behavior-y: none;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    color: #eaeaea;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.2rem 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header a {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    color: #eaeaea;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header a:hover {
+    color: #ff2fd6;
+    transform: translateY(-2px);
+}
+
+.mainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.mainPage img {
+    max-width: 380px;
+    width: 100%;
+    filter: drop-shadow(0 20px 40px rgba(255, 47, 214, 0.35));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    padding: 0 1.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ff2fd6, #7b5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.People {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    height: 20rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personCard {
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(255, 47, 214, 0.35);
+    scale: 1;
+    transition: 0.3s;
+}
+.PersonInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    height: 3rem;
+}
+.PersonInfo h5 {
+    color: #797979;
+}
+.personCard:hover {
+    scale: 1.03;
+    box-shadow: 0 10px 30px rgba(255, 47, 214, 0.35);
+}
+.personCard img {
+    filter: invert(1);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #cfcfcf;
+}
+
+.tracksPreview {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 5rem;
+    flex: 1;
+}
+
+.Track {
+    background: linear-gradient(160deg, #111, #0a0a0a);
+    border-radius: 18px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.Track:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(255, 47, 214, 0.25);
+}
+
+.Track img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trackControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.trackControl h4 {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.trackControl button {
+    background: linear-gradient(135deg, #ff2fd6, #7b5cff);
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.4rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.trackControl button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 47, 214, 0.6);
+}
+
+.Footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #050505;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.Footer h4 {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Mobile & small screens adjustments */
+@media (max-width: 768px) {
+  html, body {
+    height: 100svh; /* fixes mobile browser UI jump */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Header adjustments */
+  .header {
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.9rem 0.5rem;
+  }
+
+  .header a {
+    font-size: 0.9rem;
+  }
+
+  /* Main hero section */
+  .mainPage {
+    padding: 3rem 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainPage img {
+    max-width: 260px;
+    width: 100%;
+  }
+
+  /* Content section */
+  .content {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  /* People grid stack */
+  .People {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+    margin: 0 auto 2rem;
+  }
+
+  .personCard {
+    flex-direction: row;
+    padding: 1rem;
+  }
+
+  .PersonInfo {
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+  }
+
+  /* Tracks section */
+  .tracksPreview {
+    padding: 1.5rem 1rem 4rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .Track {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .trackControl h4 {
+    font-size: 0.8rem;
+  }
+
+  .trackControl button {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Footer adjustments */
+  .Footer h4 {
+    font-size: 0.75rem;
+  }
+}
