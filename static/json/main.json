@@ -1,0 +1,20 @@
+{
+    "Album1": {
+        "Song1": {
+            "Title": "Lækkern på mæccern",
+            "File": "/public/audio/Nummer_1.mp3"
+        },
+        "Song2": {
+            "Title": "Rottemus",
+            "File": "/public/audio/Nummer_2.mp3"
+        },
+        "Song3": {
+            "Title": "Norsk Taco",
+            "File": "/public/audio/Nummer_3.mp3"
+        },
+        "Song4": {
+            "Title": "Vetikke",
+            "File": "/public/audio/Nummer_4.mp3"
+        }
+    }
+}

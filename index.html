@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Bang</title>
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/script.js" defer></script>
+    <script type="module" src="static/js/index.js" defer></script>
     <link rel="icon" href="static/img/goon.png">
 </head>
 <body>
+    <div class="langSelection">
+        <label for="lang"><img src="static/img/flags/Eng.png" alt=""></label>
+        <select name="lang" id="lang">
+            <option value="Norwegian"><img src="static/img/flags/Nor.png" alt=""></option>
+        </select>
+    </div>
     <div class="header">
-        <a href="index.html">Home</a>
+        <a href="index.html" id="curMenu">Home</a>
         <a href="static/html/tracks.html">Tracks</a>
         <a href="static/html/news.html">News</a>
         <a href="static/html/contact.html">Contact</a>
@@ -23,6 +29,11 @@
         <h3>Welcome to The Bang!</h3>
         <p>Your ultimate destination for the latest music tracks, news, and updates from The Bang. Stay tuned for more!
         </p>
+        <div class="socials">
+            <a href="https://instagram.com"><img src="data:image/png;base64,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" alt=""></a>
+            <a href="https://tiktok.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADj79JYAAAEmUlEQVR4AezcDV6bQBCGcdKLVU9mPJn2ZPR9kK0YSMrOLgNkpz9GcMN+8GfcQIr+6uKfq0CAu3J3XYAHuLOAc3eR4QHuLODcXWR4gOcJ9H3/kht5PdTd+9QZDrQ4PgyhKvsspwbfh6ys1ybBx5+MMjlj7VXgxraj2oJAq+BvCxYuRa2Cv7joLnTSKni31zzeLLiSb5dppWXw4YZJ8K5Ly+BAu2d56+Bk+RV5r2gdHOc3zzfQAIe86z680AP8C5yvoG8+vdQDZ8jnD6aXTdEDfJ4koPOR7/yVCiUBvozI1Yum9f6qL1U/BgjwZfBUynU6cztRBT/AE+3jNVme8JX0/5br42rzVwN8bpJT8jtnZ/YNcBQcI8AdsekqwFFwjAB3xKarAEfBMZzBHY/scVefj1/e7tVWwd9FSrjDtwreXS6Xq+J1hNfKZ9kVXPdrfGbBLTO3zilU3KftzT5ESrxCB/6i78l4rbZd3MH7r6ddAe11aIByy8ytcwoVd2mbdefx7wZ+M3wX8AVkN8jckzXCp6xPU061E7A5uLD5gIdMPizyvZMi/E8F+IQ2vxbtz4kgsk/EZuCCZn4GmilDY3yeReyciCFyj2oTcGGfNqtzAXP3rw4+Yj9dVufC3tu/Knhg32P+Lq8GXhH7e3RPuFUFPLDXZ0YxuLC53Is5e6V5Mbj6CWwhrF2KwJXdXP6R4Wv7a36/InDp1cpuPiblro1Id3BsU65unmcxg4/ZXSoB6Kvu3Ahunwnu4FgT4Jf2caj6ZnAdRUl2T6HZVnNtLCZwZXfJvE0Gk9FNQad0MoGrshmc6UP1m12s4NbphDfCZrE5cCs4dXPjXdnNZWRuvcX9z1qYDV4wfzc5Z98mRja4GjDN38ruABeeBVzVspfm5+4k5gWe+mt+HeDOKXB2cNP7ibPxj+68wLN/NePHKCt/s+cbuAXccrWxVSYe6kSuyQsL+Jp2Z/sUXL/P2poUWE6kJWEmXZZtuoFrmNaPA1R1vugEWu9a/8xb8yvJBh/nP0uW8CSWJSPvafz/BN6ruWN5NnjhWKsgKbt5hM40FCWM9SfD1N9tJSu49c6RLJdXb850VQbbWt/yk3lrVvS9CVxZwsAJa+c8H56VaYLmZJVgM9Zd528GYAKnosKa5ao6LPyZDH774SH8BLoUe/g1k6HnHb+YwccsLx06czrwQ8YLdzgB45oykAnrFDIdX2mCTNsyb5vBxx5rHQSgA77aTWvKCBWVL0qQhz9J5T2sa6EIfDyIkrl83SjL96qVGMUjKQIfez/MwYzjuV0d6r/2isGV5WT4YdE1vkNMJSkLisFpaDyoI6If7smtKuAHRV/5sBGj94tq4Az5QJl+SGyMqoLT4M7ovJ8cFhuf6uA0uhM6VyOHxsZmE3AaBl3h8UcDUlYf6moEg6XYDDx1JnSe894CPkEfPquTBevNwemEuIG3XkKCTIBMsE3zpwk38CQywk+zHnwCvKXgNa6nAU7BfqnJU63dwac6E3xOQMK8XfMaD/GfFnl6zLuCTwfSynaAO5/pAF8HXm2vAK9Gua6hAF/nVG2vAK9Gua6hvwAAAP//HtyR0gAAAAZJREFUAwC+k5jImL0e/gAAAABJRU5ErkJggg==" alt=""></a>
+            <a href="https://spotify.com"><img class="invert" src="data:image/png;base64,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" alt=""></a>
+        </div>
     </div>
     <div class="Us">
         <h3>We Are The Bang</h3>
@@ -57,14 +68,16 @@
             </div>
         </div>
     </div>
+    <h3 id="previewTitle">Heres a little preview from <span id="chosenAlbum">null</span></h3>
     <div class="tracksPreview">
-        <div class="Track">
+        <div id="base" class="Track">
             <img src="https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg" alt="">
             <div class="trackControl">
-                <h4 class="TrackElapsed">0:00</h4>
+                <h4 id="TrackElapsed">0.00</h4>
                 <button>Play</button>
-                <h4 class="TrackDuration">0:00</h4>
+                <h4 id="TrackDuration">0:00</h4>
             </div>
+            <h3>null</h3>
         </div>
     </div>
     <div class="Footer">

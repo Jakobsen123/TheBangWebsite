@@ -1,14 +1,12 @@
-
-
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
 
 html {
-    background: radial-gradient(circle at top, #111 0%, #000 60%);
-    overscroll-behavior-y: none;
+    background-color: black;
 }
 
 body {
@@ -25,6 +23,29 @@ body {
     box-sizing: border-box;
 }
 
+.langSelection {
+    display: none;
+    width: 3rem;
+    height: 2rem;
+
+    position: sticky;
+    top: 1.5rem;
+    left: 95%;
+    z-index: 1111;
+}
+
+.langSelection img {
+    width: 3rem;
+    height: 2rem;
+}
+
+#contactHeader {
+    flex: 1;
+    background: linear-gradient(90deg, #ff2fd6, #7b5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -33,6 +54,7 @@ body {
     justify-content: center;
     gap: 3rem;
     padding: 1.2rem 0;
+    width: 100vw;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -46,6 +68,12 @@ body {
     color: #eaeaea;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
+}
+
+#curMenu {
+    color: #ff2fd6;
+    transform: translateY(-2px);
+    text-decoration: underline;
 }
 
 .header a:hover {
@@ -68,13 +96,21 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
 }
 
 .content {
     text-align: center;
     max-width: 700px;
+    flex: 1;
     margin: 0 auto 4rem;
     padding: 0 1.5rem;
 }
@@ -109,6 +145,7 @@ h3 {
     scale: 1;
     transition: 0.3s;
 }
+
 .PersonInfo {
     display: flex;
     flex-direction: column;
@@ -117,19 +154,31 @@ h3 {
     align-content: center;
     height: 3rem;
 }
+
 .PersonInfo h5 {
     color: #797979;
 }
+
 .personCard:hover {
     scale: 1.03;
     box-shadow: 0 10px 30px rgba(255, 47, 214, 0.35);
 }
+.socials img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.invert {
+    filter: invert(1);
+}
+
 .personCard img {
     filter: invert(1);
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
 }
+
 .content p {
     font-size: 1rem;
     line-height: 1.7;
@@ -137,9 +186,12 @@ h3 {
 }
 
 .tracksPreview {
-    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 1rem;
     padding: 2rem 1rem 5rem;
     flex: 1;
 }
@@ -149,8 +201,13 @@ h3 {
     border-radius: 18px;
     width: 280px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.Track h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 .Track:hover {
@@ -196,7 +253,7 @@ h3 {
     text-align: center;
     padding: 1.5rem 1rem;
     background: #050505;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .Footer h4 {
@@ -206,98 +263,112 @@ h3 {
 
 /* Mobile & small screens adjustments */
 @media (max-width: 768px) {
-  html, body {
-    height: 100svh; /* fixes mobile browser UI jump */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  /* Header adjustments */
-  .header {
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 0.9rem 0.5rem;
-  }
+    html,
+    body {
 
-  .header a {
-    font-size: 0.9rem;
-  }
+        height: 100svh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    #previewTitle {
+        font-size: 1.3rem;
+    }
 
-  /* Main hero section */
-  .mainPage {
-    padding: 3rem 1rem 2rem;
-    justify-content: center;
-    align-items: center;
-  }
+    /* Header adjustments */
+    .header {
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0.9rem 0.5rem;
+    }
 
-  .mainPage img {
-    max-width: 260px;
-    width: 100%;
-  }
+    .header a {
+        font-size: 0.9rem;
+    }
 
-  /* Content section */
-  .content {
-    max-width: 95%;
-    padding: 0 1rem;
-  }
+    /* Main hero section */
+    .mainPage {
+        padding: 3rem 1rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
 
-  h3 {
-    font-size: 1.6rem;
-  }
+    .mainPage img {
+        max-width: 260px;
+        width: 100%;
+    }
 
-  .content p {
-    font-size: 0.95rem;
-  }
+    /* Content section */
+    .content {
+        max-width: 95%;
+        padding: 0 1rem;
+    }
 
-  /* People grid stack */
-  .People {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1.5rem;
-    width: 100%;
-    height: auto;
-    padding: 0 1rem;
-    margin: 0 auto 2rem;
-  }
+    h3 {
+        font-size: 1.6rem;
+    }
 
-  .personCard {
-    flex-direction: row;
-    padding: 1rem;
-  }
+    .content p {
+        font-size: 0.95rem;
+    }
 
-  .PersonInfo {
-    align-items: flex-start;
-    text-align: left;
-    justify-content: center;
-  }
+    /* People grid stack */
+    .People {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.5rem;
+        width: 100%;
+        height: auto;
+        padding: 0 1rem;
+        margin: 0 auto 2rem;
+    }
 
-  /* Tracks section */
-  .tracksPreview {
-    padding: 1.5rem 1rem 4rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
+    .personCard {
+        flex-direction: row;
+        padding: 1rem;
+        width: 90vw;
+    }
 
-  .Track {
-    width: 100%;
-    max-width: 320px;
-  }
+    .PersonInfo {
+        align-items: flex-start;
+        text-align: left;
+        justify-content: center;
+    }
 
-  .trackControl h4 {
-    font-size: 0.8rem;
-  }
+    /* Tracks section */
+    .tracksPreview {
+        padding: 1.5rem 1rem 4rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
 
-  .trackControl button {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.85rem;
-  }
+    .Track {
+        width: 100%;
+        max-width: 220px;
+    }
 
-  /* Footer adjustments */
-  .Footer h4 {
-    font-size: 0.75rem;
-  }
+    .Track h3 {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .trackControl h4 {
+        font-size: 0.8rem;
+    }
+
+    .trackControl button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    /* Footer adjustments */
+    .Footer h4 {
+        width: 100vw;
+        font-size: 0.75rem;
+    }
 }
