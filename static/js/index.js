@@ -36,30 +36,27 @@ async function setSongPreview() {
         songPlayButton.addEventListener('click', () => {
             if (!currentAudio) {
                 audio.play()
-                currentAudio = audio
                 currentbtn = songPlayButton
+                currentAudio = audio
                 songPlayButton.innerText = 'Pause'
-                return
+                return 
             }
-
-            if (currentAudio !== audio) {
+            else if (currentAudio !== audio) {
                 currentAudio.pause()
                 currentAudio.currentTime = 0
                 currentbtn.innerText = 'Play'
-
                 audio.play()
                 currentAudio = audio
                 currentbtn = songPlayButton
-                songPlayButton.innerText = 'Pause'
+                currentbtn.innerText = 'Pause'
                 return
-            }
-
-            if (audio.paused) {
-                audio.play()
-                songPlayButton.innerText = 'Pause'
             } else {
-                audio.pause()
-                songPlayButton.innerText = 'Play'
+                currentAudio.pause()
+                currentbtn.innerText = 'Play'
+                currentAudio.currentTime = 0
+                currentbtn = null
+                currentAudio = null
+                return 
             }
         })
     }
