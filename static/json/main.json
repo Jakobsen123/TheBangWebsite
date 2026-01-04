@@ -1,10 +1,10 @@
 {
     "TheBang": {
-        "Cover":"/static/img/Goon.png",
+        "Cover":"/static/img/goon.png",
         "Song1": {
             "Title": "Lækkern på mæccern",
             "File": "/public/audio/Nummer_1.mp3",
-            "Cover":"/static/img/Goon.png"
+            "Cover":"/static/img/goon.png"
         },
         "Song2": {
             "Title": "Rottemus",
