@@ -38,6 +38,7 @@ body {
     width: 3rem;
     height: 2rem;
 }
+
 h1 {
     background: linear-gradient(90deg, #ff2fd6, #7b5cff);
     -webkit-background-clip: text;
@@ -185,7 +186,7 @@ h1 {
     margin: 0 auto 4rem;
     padding: 0 1.5rem;
     margin-bottom: 0;
-    
+
 }
 
 h3 {
@@ -373,6 +374,11 @@ h3 {
         align-items: center;
     }
 
+    .ContactInfo h4 {
+        color: rgb(234, 148, 249);
+        font-size: 2rem;
+    }
+
     .mainPage img {
         max-width: 260px;
         width: 100%;
@@ -448,6 +454,7 @@ h3 {
         width: 100vw;
         font-size: 0.75rem;
     }
+
     .albumtracks {
         display: flex;
         flex-direction: column;
