@@ -9,17 +9,17 @@
         "Song2": {
             "Title": "Rottemus",
             "File": "/public/audio/Nummer_2.mp3",
-            "Cover":"../static/img/thebigbang.jpg"
+            "Cover":"../static/img/albumCovers/thebigbang.jpg"
         },
         "Song3": {
             "Title": "Norsk Taco",
             "File": "/public/audio/Nummer_3.mp3",
-            "Cover":"../static/img/thebigbang.jpg"
+            "Cover":"../static/img/albumCovers/thebigbang.jpg"
         },
         "Song4": {
             "Title": "Vetikke",
             "File": "/public/audio/Nummer_4.mp3",
-            "Cover":"../static/img/thebigbang.jpg"
+            "Cover":"../static/img/albumCovers/thebigbang.jpg"
         }
     },
     "Album2": {
