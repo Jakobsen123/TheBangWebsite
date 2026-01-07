@@ -18,7 +18,7 @@ function mainImgAnim() {
 }
 
 async function setSongPreview() {
-    const chosenAlbumName = 'TheBang'
+    const chosenAlbumName = 'The Big Bang'
 
     const albumData = await functionModule.getSong(chosenAlbumName)
     const base = document.getElementById('base')
