@@ -46,26 +46,26 @@
         }
     },
     "BigK": {
-        "Cover":"../static/img/albumCovers/brh.png",
+        "Cover":"../static/img/albumCovers/Kirky.png",
         "Song1": {
             "Title": "Kjell og co",
             "File": "/public/audio/Nummer_1.mp3",
-            "Cover":"../static/img/albumCovers/brh.png"
+            "Cover":"../static/img/albumCovers/Kirky.png"
         },
         "Song2": {
             "Title": "Hei sindre",
             "File": "/public/audio/Nummer_2.mp3",
-            "Cover":"../static/img/albumCovers/brh.png"
+            "Cover":"../static/img/albumCovers/Kirky.png"
         },
         "Song3": {
             "Title": "GørtyBoy",
             "File": "/public/audio/Nummer_3.mp3",
-            "Cover":"../static/img/albumCovers/brh.png"
+            "Cover":"../static/img/albumCovers/Kirky.png"
         },
         "Song4": {
             "Title": "Matschnias",
             "File": "/public/audio/Nummer_4.mp3",
-            "Cover":"../static/img/albumCovers/brh.png"
+            "Cover":"../static/img/albumCovers/Kirky.png"
         }
     }
 }

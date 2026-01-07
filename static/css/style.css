@@ -12,6 +12,11 @@ html {
     background-color: black;
 }
 
+hr {
+    background-color: rgb(160, 159, 159);
+    height: 0.05rem;
+}
+
 body {
     text-align: center;
     display: flex;
@@ -65,7 +70,7 @@ h1 {
 .Divider {
     background: linear-gradient(90deg, #ff2fd6, #7b5cff);
     height: 0.1rem;
-    width: 90vw;
+    width: 45vw;
     margin-left: auto;
     margin-right: auto;
 }
