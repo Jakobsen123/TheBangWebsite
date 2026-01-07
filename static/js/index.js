@@ -3,6 +3,20 @@ import * as functionModule from './functions.js'
 let currentAudio = null
 let currentbtn = null
 
+let imgInt = 0
+
+function mainImgAnim() {
+    const img  = document.getElementById('mainImg');
+
+    if (imgInt > 360) {
+        imgInt = 0;
+    }
+    img.style.filter = `hue-rotate(${imgInt}deg)`;
+    imgInt += 1;
+
+    requestAnimationFrame(mainImgAnim);
+}
+
 async function setSongPreview() {
     const chosenAlbumName = 'TheBang'
 
@@ -97,6 +111,7 @@ function handlePersonClick() {
 async function init() {
     await setSongPreview()
     handlePersonClick()
+    requestAnimationFrame(mainImgAnim)
 }
 
 document.addEventListener('DOMContentLoaded', init) 
