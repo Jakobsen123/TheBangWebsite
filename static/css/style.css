@@ -4,6 +4,9 @@ body {
     margin: 0;
 }
 
+* {
+    -webkit-user-drag: none;
+}
 
 html {
     background-color: black;
@@ -329,8 +332,8 @@ h3 {
 }
 
 .Track:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(255, 47, 214, 0.25);
+    transform: translateY(-10px);
+    transform: scale(1.03);
 }
 
 .Track img {
