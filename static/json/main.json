@@ -23,26 +23,26 @@
         }
     },
     "Album2": {
-        "Cover":"/static/img/albumCover/brh.png",
+        "Cover":"/static/img/albumCovers/brh.png",
         "Song1": {
             "Title": "Lækkern på mæccern",
             "File": "/public/audio/Nummer_1.mp3",
-            "Cover":"./static/img/albumCover/brh.png"
+            "Cover":"./static/img/albumCovers/brh.png"
         },
         "Song2": {
             "Title": "Rottemus",
             "File": "/public/audio/Nummer_2.mp3",
-            "Cover":"/static/img/albumCover/brh.png"
+            "Cover":"/static/img/albumCovers/brh.png"
         },
         "Song3": {
             "Title": "Norsk Taco",
             "File": "/public/audio/Nummer_3.mp3",
-            "Cover":"/static/img/albumCover/brh.png"
+            "Cover":"/static/img/albumCovers/brh.png"
         },
         "Song4": {
             "Title": "Vetikke",
             "File": "/public/audio/Nummer_4.mp3",
-            "Cover":"/static/img/albumCover/brh.png"
+            "Cover":"/static/img/albumCovers/brh.png"
         }
     }
 }
