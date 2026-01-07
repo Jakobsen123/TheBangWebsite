@@ -27,14 +27,16 @@ body {
 }
 
 .langSelection {
-    display: none;
     width: 3rem;
     height: 2rem;
-
     position: sticky;
-    top: 1.5rem;
+    top: 0.5rem;
     left: 95%;
     z-index: 1111;
+}
+.langSelection button {
+    background: none;
+    border: none;
 }
 
 .langSelection img {
