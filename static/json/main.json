@@ -4,7 +4,7 @@
         "Song1": {
             "Title": "Lækkern på mæccern",
             "File": "/public/audio/Nummer_1.mp3",
-            "Cover":"../static/img/heisindre.jpg"
+            "Cover":"../static/img/albumCovers/heisindre.jpg"
         },
         "Song2": {
             "Title": "Rottemus",
