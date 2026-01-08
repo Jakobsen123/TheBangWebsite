@@ -5,6 +5,9 @@ const langs = {
     "cn": '/static/img/flags/China.webp',
     "no": '/static/img/flags/Nor.png',
     "mors": '/static/img/flags/Hm.webp',
+    "hi": '/static/img/flags/India.svg',
+    "hi": '/static/img/flags/India.svg',
+    "nk": '/static/img/flags/WA.jpg'
 };
 
 const langKeys = Object.keys(langs);
@@ -40,7 +43,17 @@ export async function setLanguage(lang, langImg = null) {
     translateElements.forEach(el => {
         const key = el.dataset.translate || el.id;
         if (translationData[key]) {
-            el.innerText = translationData[key];
+            // Preserve child elements (e.g., <span id="chosenAlbum">) when setting translated text.
+            if (el.children && el.children.length > 0) {
+                const textNode = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+                if (textNode) {
+                    textNode.nodeValue = translationData[key];
+                } else {
+                    el.insertBefore(document.createTextNode(translationData[key]), el.firstChild);
+                }
+            } else {
+                el.innerText = translationData[key];
+            }
         }
     });
 
