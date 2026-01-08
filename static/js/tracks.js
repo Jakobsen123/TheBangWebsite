@@ -1,4 +1,5 @@
 import * as functionsModule from './functions.js'
+import { setLanguage } from './lang.js'
 
 let currentAudio = null
 let currentbtn = null
@@ -73,6 +74,8 @@ async function setSongPreview() {
 
 async function init() {
     await setSongPreview()
+    // re-run translation to update dynamically added elements (keeps the current language)
+    await setLanguage()
 }
 
 document.addEventListener('DOMContentLoaded', init)

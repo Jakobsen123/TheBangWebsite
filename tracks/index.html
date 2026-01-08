@@ -5,42 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracks</title>
+    <script type="module" src="../static/js/lang.js" defer></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" href="/static/img/goon.png">
     <script type="module" src="/static/js/tracks.js" defer></script>
 </head>
 <body>
     <div class="header">
-        <a href="../">Home</a>
-        <a href="/tracks/" id="curMenu">Tracks</a>
-        <a href="/news/">News</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about us/">About Us</a>
+        <a id="tracks_nav_home" href="../" data-translate>Home</a>
+        <a id="tracks_nav_tracks" href="/tracks/" class="curMenu" data-translate>Tracks</a>
+        <a id="tracks_nav_news" href="/news/" data-translate>News</a>
+        <a id="tracks_nav_contact" href="/contact/" data-translate>Contact</a>
+        <a id="tracks_nav_about" class="aboutUs" href="/about us/" data-translate>About Us</a>
+        <button id="langbtn"><img id="langImg" src="static/img/flags/Eng.png" alt=""></button>
     </div>
+
     <div class="content">
-        <h3>Our Tracks</h3>
-        <p>Listen to our tracks, and stay updated for new releases!
+        <h3 id="tracks_title" data-translate>Our Tracks</h3>
+        <p id="tracks_intro" data-translate>
+            Listen to our tracks, and stay updated for new releases!
         </p>
     </div>
+
     <div id="AlbumsContainer" class="Albums">
         <div id="baseAlbum" class="Album">
-            <h2>Album1</h2>
+            <h2 id="tracks_album1_title" data-translate>Album1</h2>
+
             <div class="albumtracks">
                 <div id="baseTrack2" class="Track">
-                    <img src="https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg" alt="">
+                    <img
+                        src="https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg"
+                        alt="">
+
                     <div class="trackControl">
-                        <h4 class="TrackElapsed">0:00</h4>
-                        <button>Play</button>
-                        <h4 class="TrackDuration">0:00</h4>
+                        <h4 class="TrackElapsed" id="track_baseTrack2_elapsed" data-translate>0:00</h4>
+                        <button id="track_baseTrack2_play" data-translate>Play</button>
+                        <h4 class="TrackDuration" id="track_baseTrack2_duration" data-translate>0:00</h4>
                     </div>
-                    <h3>Lækkern på Mæccern</h3>
+
+                    <h3 id="track_baseTrack2_title" data-translate>
+                        Lækkern på Mæccern
+                    </h3>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="Footer">
-        <h4>© 2025 The Bang. All rights reserved.</h4>
+        <h4 id="tracks_footer_copyright" data-translate>
+            © 2025 The Bang. All rights reserved.
+        </h4>
     </div>
+        <script type="module">
+        import { setLanguage } from '../static/js/lang.js'
+
+        document.addEventListener('DOMContentLoaded', async ()=> {
+            await setLanguage(document.getElementById('langImg'))
+            
+        })
+    </script>
 </body>
 
 </html>

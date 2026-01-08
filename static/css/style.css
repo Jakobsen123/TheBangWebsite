@@ -155,12 +155,27 @@ h1 {
     transition: color 0.3s, transform 0.3s;
 }
 
+#langbtn {
+    position: absolute; 
+    right: 20px;        
+    top: 50%;            
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#langbtn img {
+    width: 60px;         
+    height: 40px;
+}
+
 #mainImg {
     box-shadow: 0 0 4rem rgba(255, 47, 214, 0.6);
     border-radius: 2rem;
 }
 
-#curMenu {
+.curMenu {
     color: #ff2fd6;
     transform: translateY(-2px);
     text-decoration: underline;
@@ -184,6 +199,7 @@ h1 {
     filter: drop-shadow(0 20px 40px rgba(255, 47, 214, 0.35));
     animation: float 6s ease-in-out infinite;
 }
+
 
 @keyframes float {
 

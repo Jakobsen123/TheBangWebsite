@@ -5,24 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <script type="module" src="../static/js/lang.js" defer></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" href="/static/img/goon.png">
 </head>
 <body>
     <div class="header">
-        <a href="../">Home</a>
-        <a href="/tracks/">Tracks</a>
-        <a href="/news/" id="curMenu">News</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about us/">About Us</a>
+        <a id="news_nav_home" href="../">Home</a>
+        <a id="news_nav_tracks" href="/tracks/">Tracks</a>
+        <a id="news_nav_news" href="/news/" class="curMenu">News</a>
+        <a id="news_nav_contact" href="/contact/">Contact</a>
+        <a id="news_nav_about" href="/about us/">About Us</a>
+        <button id="langbtn"><img id="langImg" src="static/img/flags/Eng.png" alt=""></button>
     </div>
     <div class="content">
-        <h3>The Bang News</h3>
-        <p>Updates from us will appear here soon. Stay tuned!</p>
+        <h3 id="news_title">The Bang News</h3>
+        <p id="news_intro">Updates from us will appear here soon. Stay tuned!</p>
     </div>
     <div class="Footer">
-        <h4>© 2025 The Bang. All rights reserved.</h4>
+        <h4 id="news_footer_copyright">© 2025 The Bang. All rights reserved.</h4>
     </div>
+        <script type="module">
+        import { setLanguage } from '../static/js/lang.js'
+
+        document.addEventListener('DOMContentLoaded', async ()=> {
+            await setLanguage(document.getElementById('langImg'))
+            
+        })
+    </script>
 </body>
 
-</html>
+</html

@@ -5,30 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <script type="module" src="../static/js/lang.js" defer></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" href="/static/img/goon.png">
 </head>
 <body>
     <div class="header">
-        <a href="../">Home</a>
-        <a href="/tracks/">Tracks</a>
-        <a href="/news/">News</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about us/" id="curMenu">About Us</a>
+        <a id="about_nav_home" href="../">Home</a>
+        <a id="about_nav_tracks" href="/tracks/">Tracks</a>
+        <a id="about_nav_news" href="/news/">News</a>
+        <a id="about_nav_contact" href="/contact/">Contact</a>
+        <a id="about_nav_about" href="/about us/" class="curMenu">About Us</a>
+        <button id="langbtn"><img id="langImg" src="static/img/flags/Eng.png" alt=""></button>
     </div>
     <div class="content">
-        <h3>About Us</h3>
-        <p>The Bang is a rock music group founded by Jakob,Eilert,Edward and Victor.</p>
+        <h3 id="about_title">About Us</h3>
+        <p id="about_intro">The Bang is a rock music group founded by Jakob,Eilert,Edward and Victor.</p>
         <div class="Divider"></div>
-        <p>We started our journey in 2025 by playing covers by ourselves, and eventualy playing for a about 300 people.</p>
-        <p>Eventualy we decided to create our own music and and have since been working on songs.</p>
+        <p id="about_p1">We started our journey in 2025 by playing covers by ourselves, and eventualy playing for a about 300 people.</p>
+        <p id="about_p2">Eventualy we decided to create our own music and and have since been working on songs.</p>
         <div class="Divider"></div>
-        <p>we are currently working on a new album and hope to release it soon. Stay tuned!</p>
+        <p id="about_p3">we are currently working on a new album and hope to release it soon. Stay tuned!</p>
 
     </div>
     <div class="Footer">
-        <h4>© 2025 The Bang. All rights reserved.</h4>
+        <h4 id="about_footer_copyright">© 2025 The Bang. All rights reserved.</h4>
     </div>
+    <script type="module">
+        import { setLanguage } from '../static/js/lang.js'
+
+        document.addEventListener('DOMContentLoaded', async ()=> {
+            await setLanguage(document.getElementById('langImg'))
+            
+        })
+    </script>
 </body>
 
 </html>
