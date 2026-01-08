@@ -22,7 +22,6 @@
         "index_person_victor_fullname": "维克多·马德森",
         "previewTitle": "这是来自",
         "index_preview_play": "播放",
-        "index_preview_track_title": "未选择歌曲",
         "index_footer_copyright": "© 2025 The Bang。保留所有权利。"
     },
     "News": {
@@ -67,11 +66,9 @@
         "tracks_nav_about": "关于我们",
         "tracks_title": "我们的曲目",
         "tracks_intro": "收听我们的曲目，并关注最新发布！",
-        "tracks_album1_title": "专辑1",
         "track_baseTrack2_elapsed": "0:00",
         "track_baseTrack2_play": "播放",
         "track_baseTrack2_duration": "0:00",
-        "track_baseTrack2_title": "Lækkern på Mæccern",
         "tracks_footer_copyright": "© 2025 The Bang. 版权所有。"
     }
 }

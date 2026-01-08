@@ -22,7 +22,6 @@
         "index_person_victor_fullname": "Victor Madsen",
         "previewTitle": "Her er en liten forhåndsvisning fra",
         "index_preview_play": "Spill av",
-        "index_preview_track_title": "Ingen sang valgt",
         "index_footer_copyright": "© 2025 The Bang. Alle rettigheter reservert."
     },
     "News": {
@@ -67,11 +66,9 @@
         "tracks_nav_about": "Om oss",
         "tracks_title": "Våre spor",
         "tracks_intro": "Hør på våre spor, og følg med for nye utgivelser!",
-        "tracks_album1_title": "Album1",
         "track_baseTrack2_elapsed": "0:00",
         "track_baseTrack2_play": "Spill av",
         "track_baseTrack2_duration": "0:00",
-        "track_baseTrack2_title": "Lækkern på Mæccern",
         "tracks_footer_copyright": "© 2025 The Bang. Alle rettigheter reservert."
     }
 }
