@@ -61,7 +61,6 @@ export async function setLanguage(lang, langImg = null) {
     if (langImg) langImg.src = langs[lang];
 }
 
-
 export async function setLang(langImg) {
     curLang += 1;
     if (curLang >= langKeys.length) curLang = 0;
