@@ -7,7 +7,8 @@ const langs = {
     "mors": '/static/img/flags/Hm.webp',
     "hi": '/static/img/flags/India.svg',
     "hi": '/static/img/flags/India.svg',
-    "nk": '/static/img/flags/WA.jpg'
+    "nk": '/static/img/flags/WA.jpg',
+    "ia": '/static/img/flags/ia.webp',
 };
 
 const langKeys = Object.keys(langs);
