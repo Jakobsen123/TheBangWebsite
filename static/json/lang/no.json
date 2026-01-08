@@ -1,7 +1,7 @@
 {
     "Home": {
         "index_nav_home": "Hjem",
-        "index_nav_tracks": "Spor",
+        "index_nav_tracks": "Låter",
         "index_nav_news": "Nyheter",
         "index_nav_contact": "Kontakt",
         "index_nav_about": "Om oss",
@@ -20,7 +20,7 @@
         "index_person_victor_name": "Victor",
         "index_person_victor_role": "Lead-gitarist og vokalist",
         "index_person_victor_fullname": "Victor Madsen",
-        "previewTitle": "Her er en liten forhåndsvisning fra",
+        "previewTitle": "Her er en liten forhåndsvisning fra ",
         "index_preview_play": "Spill av",
         "index_footer_copyright": "© 2025 The Bang. Alle rettigheter reservert."
     },
